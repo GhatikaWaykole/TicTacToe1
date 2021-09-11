@@ -2,32 +2,35 @@ package com.example.TicTacToe;
 
 import java.util.Scanner;
 
-public class compute{
-    //Scanner in = new Scanner(System.in);
-    static void chooseInput(){
-        Scanner in = new Scanner(System.in);
-        String turn ="X";
-        System.out.println("Enter the choice X or Y");
-        String input = in.nextLine();
-        if(input.equals("X")){
-            turn = "Y";
-        }
-            else{
-                turn ="Y";
-            }
+public class TicTacToe {
+    char letter;
+    //public static void userinput(){
+    //    Scanner input = new Scanner(System.in);//
+    public static void inputArray(){
+        String[] board = new String[10];
+        for(int i=1;i<board.length;i++){
+            board[i]=" ";
         }
     }
-public class TicTacToe {
+    private static char chooseLetter(Scanner userinput){
+
+        System.out.println("Enter the number you want to choose X or O");
+
+        return userinput.next().charAt(0);
+
+    }
+    // showBoard method is for showing the board
+    public void showBoard(){
+        System.out.println("The board is");
+        System.out.println("| 1 | 2 | 3 |\n| 4 | 5 | 6 | \n| 7 | 8 | 9 |");
+    }
+
     public static void main(String args[]){
-        Scanner in = new Scanner(System.in);
-        String[] board = new String[10];
-        String turn = "x";
-        String winner=null;
-        for(int i=1;i< board.length;i++)
-        {
-            board[i]="";
-
-        }
-
+     //   char userinput;
+        TicTacToe obj = new TicTacToe();
+        Scanner input = new Scanner(System.in);
+       char userinput = chooseLetter(input);
+      obj.inputArray();
+      obj.showBoard();
     }
 }
