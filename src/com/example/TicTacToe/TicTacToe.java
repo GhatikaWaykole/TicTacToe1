@@ -1,9 +1,22 @@
 package com.example.TicTacToe;
 
-import javafx.scene.transform.Scale;
-
 import java.util.Scanner;
 
+public class compute{
+    //Scanner in = new Scanner(System.in);
+    static void chooseInput(){
+        Scanner in = new Scanner(System.in);
+        String turn ="X";
+        System.out.println("Enter the choice X or Y");
+        String input = in.nextLine();
+        if(input.equals("X")){
+            turn = "Y";
+        }
+            else{
+                turn ="Y";
+            }
+        }
+    }
 public class TicTacToe {
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
